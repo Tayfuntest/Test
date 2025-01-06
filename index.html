@@ -10,97 +10,99 @@
         /* Algemene body styling */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #ecf0f1;
+        }
+
+        /* Algemene styling voor de container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* Header styling */
         header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #f39c12;
+            color: white;
+            padding: 40px 0;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         header h1 {
+            font-size: 50px;
             margin: 0;
-            font-size: 36px;
             font-weight: bold;
-            color: #f1c40f; /* Geel voor taxi sfeer */
         }
 
         header p {
-            font-size: 18px;
-            font-weight: 400;
-            color: #f1c40f;
+            font-size: 20px;
+            margin-top: 10px;
         }
 
-        /* Navigatiebalk styling */
+        /* Navigatie styling */
         nav {
-            background-color: #f1c40f; /* Geel voor zichtbaarheid */
-            padding: 10px 0;
+            background-color: #34495e;
             text-align: center;
+            padding: 10px 0;
         }
 
         nav a {
-            color: #1a1a1a;
+            color: #ecf0f1;
             text-decoration: none;
+            padding: 14px 25px;
             font-size: 18px;
             margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            color: #e67e22; /* Oranje bij hover */
+            background-color: #f39c12;
+            color: #fff;
         }
 
         /* Hero sectie */
         .hero {
             background: url('taxi-hero-image.jpg') no-repeat center center;
             background-size: cover;
-            height: 500px;
+            height: 450px;
             color: white;
             text-align: center;
-            padding-top: 120px;
+            padding-top: 100px;
         }
 
         .hero h2 {
-            font-size: 48px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            font-size: 50px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
             margin: 0;
         }
 
         .hero p {
             font-size: 20px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         /* Sectie voor diensten */
-        .section-diensten {
-            padding: 60px 20px;
+        .diensten {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 0;
             background-color: #ffffff;
-            text-align: center;
-        }
-
-        .section-diensten h2 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
         }
 
         .dienst-item {
-            display: inline-block;
+            background-color: #f1c40f;
+            color: white;
+            padding: 40px;
             width: 30%;
-            margin: 0 1.5%;
-            padding: 20px;
-            background-color: #f9f9f9;
+            text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
             transition: transform 0.3s ease;
         }
 
@@ -109,44 +111,50 @@
         }
 
         .dienst-item h3 {
-            font-size: 24px;
-            color: #f1c40f;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
         .dienst-item p {
-            font-size: 16px;
-            color: #777;
+            font-size: 18px;
         }
 
         /* Contact formulier styling */
-        form {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .contact {
+            background-color: #34495e;
+            color: white;
+            padding: 40px 0;
         }
 
-        form label {
-            display: block;
+        .contact h2 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .contact form {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact label {
             font-size: 16px;
-            margin-bottom: 8px;
-            color: #333;
+            margin-bottom: 5px;
         }
 
-        form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="number"], form select, form textarea {
-            width: 100%;
+        .contact input, .contact textarea {
             padding: 12px;
-            margin-bottom: 16px;
+            font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 16px;
         }
 
-        form button {
-            background-color: #f1c40f;
-            color: #1a1a1a;
-            padding: 14px 20px;
+        .contact button {
+            background-color: #f39c12;
+            color: white;
+            padding: 12px;
             font-size: 18px;
             border: none;
             border-radius: 4px;
@@ -154,37 +162,40 @@
             transition: background-color 0.3s ease;
         }
 
-        form button:hover {
+        .contact button:hover {
             background-color: #e67e22;
         }
 
-        /* Footer styling */
+        /* Footer */
         footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 40px 20px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
             text-align: center;
         }
 
         footer p {
-            font-size: 16px;
-            margin: 0;
+            font-size: 14px;
         }
 
         footer a {
-            color: #f1c40f;
+            color: #f39c12;
             text-decoration: none;
-            font-weight: 600;
         }
 
         footer a:hover {
-            color: #e67e22;
+            text-decoration: underline;
         }
 
-        /* Responsiveness voor mobiele schermen */
+        /* Responsiviteit voor mobiele apparaten */
         @media (max-width: 768px) {
+            .diensten {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .dienst-item {
-                width: 100%;
+                width: 80%;
                 margin-bottom: 20px;
             }
 
@@ -194,6 +205,7 @@
 
             nav a {
                 font-size: 16px;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -203,7 +215,7 @@
     <!-- Header -->
     <header>
         <h1>Taxi Service</h1>
-        <p>Snelle en betrouwbare ritten, altijd beschikbaar!</p>
+        <p>Snelle, betrouwbare en comfortabele ritten voor elke gelegenheid!</p>
     </header>
 
     <!-- Navigatiebalk -->
@@ -216,30 +228,29 @@
 
     <!-- Hero sectie -->
     <section class="hero">
-        <h2>De beste taxi service in de stad</h2>
-        <p>Kom snel en veilig op uw bestemming!</p>
+        <h2>Jouw taxi, altijd dichtbij!</h2>
+        <p>Maak een rit met ons, snel, veilig en comfortabel.</p>
     </section>
 
     <!-- Diensten sectie -->
-    <section class="section-diensten">
-        <h2>Onze Diensten</h2>
+    <section class="diensten">
         <div class="dienst-item">
             <h3>Standaard Taxi</h3>
-            <p>Een betrouwbare en betaalbare taxi voor al uw ritten.</p>
+            <p>Voor dagelijkse ritten, snel en betrouwbaar.</p>
         </div>
         <div class="dienst-item">
             <h3>Luxe Taxi</h3>
-            <p>Reis in comfort met onze luxe taxiservice.</p>
+            <p>Reis in stijl met onze luxe voertuigen.</p>
         </div>
         <div class="dienst-item">
             <h3>Vervoer voor Groepen</h3>
-            <p>Ruime voertuigen voor grotere groepen en evenementen.</p>
+            <p>Ideaal voor evenementen of groepsvervoer.</p>
         </div>
     </section>
 
-    <!-- Contact formulier -->
+    <!-- Contact sectie -->
     <section class="contact">
-        <h2>Neem Contact Met Ons Op</h2>
+        <h2>Neem contact met ons op</h2>
         <form action="#">
             <label for="name">Naam</label>
             <input type="text" id="name" name="name" placeholder="Uw naam" required>
@@ -248,7 +259,7 @@
             <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
 
             <label for="message">Bericht</label>
-            <textarea id="message" name="message" placeholder="Hoe kunnen wij u helpen?" required></textarea>
+            <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
 
             <button type="submit">Verstuur</button>
         </form>
@@ -258,6 +269,10 @@
     <footer>
         <p>&copy; 2025 Taxi Bedrijf. Alle rechten voorbehouden. <a href="#">Privacybeleid</a></p>
     </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>
