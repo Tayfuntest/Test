@@ -1,84 +1,190 @@
-/* Algemene stijlen */
+/* Algemene body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-nav {
-    text-align: center;
-    background-color: #444;
-}
-
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: #575757;
-}
-
-section {
-    padding: 2em;
-    margin: 2em;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
     color: #333;
 }
 
-footer {
-    background-color: #333;
+/* Header styling */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: #f1c40f; /* Geel voor taxi sfeer */
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #f1c40f;
+}
+
+/* Navigatiebalk styling */
+nav {
+    background-color: #f1c40f; /* Geel voor zichtbaarheid */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e67e22; /* Oranje bij hover */
+}
+
+/* Hero sectie */
+.hero {
+    background: url('taxi-hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding-top: 120px;
 }
 
-/* Formulier stijlen */
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Sectie voor diensten */
+.section-diensten {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.section-diensten h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.dienst-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dienst-item:hover {
+    transform: translateY(-10px);
+}
+
+.dienst-item h3 {
+    font-size: 24px;
+    color: #f1c40f;
+}
+
+.dienst-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #e67e22;
+}
+
+/* Formulier styling */
 form {
-    margin-top: 1em;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-input, select {
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="number"], form select {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-input[type="submit"] {
-    background-color: #333;
-    color: white;
+form button {
+    background-color: #f1c40f;
+    color: #1a1a1a;
+    padding: 14px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #555;
+form button:hover {
+    background-color: #e67e22;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Responsiveness voor mobiele schermen */
+@media (max-width: 768px) {
+    .dienst-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
 }
 
-ul li {
-    margin: 5px 0;
-}
