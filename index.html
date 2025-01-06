@@ -3,86 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Taxi Bedrijf - Snel en veilig van A naar B.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Taxi Bedrijf</title>
-    <!-- Link naar de externe CSS -->
-    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Algemene body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            color: #f1c40f; /* Geel voor taxi sfeer */
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #f1c40f;
+        }
+
+        /* Navigatiebalk styling */
+        nav {
+            background-color: #f1c40f; /* Geel voor zichtbaarheid */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e67e22; /* Oranje bij hover */
+        }
+
+        /* Hero sectie */
+        .hero {
+            background: url('taxi-hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            color: white;
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        /* Sectie voor diensten */
+        .section-diensten {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .section-diensten h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .dienst-item {
+            display: inline-block;
+            width: 30%;
+            margin: 0 1.5%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .dienst-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .dienst-item h3 {
+            font-size: 24px;
+            color: #f1c40f;
+        }
+
+        .dienst-item p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Contact formulier styling */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="number"], form select, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #f1c40f;
+            color: #1a1a1a;
+            padding: 14px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        /* Responsiveness voor mobiele schermen */
+        @media (max-width: 768px) {
+            .dienst-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Taxi Bedrijf</h1>
-    <p>Snel, veilig en betrouwbaar vervoer voor elke gelegenheid</p>
-</header>
+    <!-- Header -->
+    <header>
+        <h1>Taxi Service</h1>
+        <p>Snelle en betrouwbare ritten, altijd beschikbaar!</p>
+    </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#diensten">Diensten</a>
-    <a href="#reserveren">Reserveren</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- Navigatiebalk -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Diensten</a>
+        <a href="#">Over ons</a>
+        <a href="#">Contact</a>
+    </nav>
 
-<section id="home">
-    <h2>Welkom bij Taxi Bedrijf</h2>
-    <p>Bij Taxi Bedrijf zorgen wij ervoor dat je altijd op tijd op je bestemming aankomt. Of je nu naar het vliegveld moet, een zakelijke afspraak hebt, of gewoon een rit door de stad wilt maken – wij staan voor je klaar. Onze chauffeurs zijn ervaren, vriendelijk en professioneel.</p>
-</section>
+    <!-- Hero sectie -->
+    <section class="hero">
+        <h2>De beste taxi service in de stad</h2>
+        <p>Kom snel en veilig op uw bestemming!</p>
+    </section>
 
-<section id="diensten">
-    <h2>Onze Diensten</h2>
-    <ul>
-        <li>Vervoer naar het vliegveld</li>
-        <li>Zakelijke ritten</li>
-        <li>Stadsvervoer</li>
-        <li>Groepsvervoer</li>
-        <li>24/7 Beschikbaarheid</li>
-    </ul>
-</section>
+    <!-- Diensten sectie -->
+    <section class="section-diensten">
+        <h2>Onze Diensten</h2>
+        <div class="dienst-item">
+            <h3>Standaard Taxi</h3>
+            <p>Een betrouwbare en betaalbare taxi voor al uw ritten.</p>
+        </div>
+        <div class="dienst-item">
+            <h3>Luxe Taxi</h3>
+            <p>Reis in comfort met onze luxe taxiservice.</p>
+        </div>
+        <div class="dienst-item">
+            <h3>Vervoer voor Groepen</h3>
+            <p>Ruime voertuigen voor grotere groepen en evenementen.</p>
+        </div>
+    </section>
 
-<section id="reserveren">
-    <h2>Reserveer je Taxi</h2>
-    <p>Vul het formulier hieronder in om een taxi te reserveren.</p>
-    <form action="mailto:info@taxibedrijf.nl" method="post" enctype="text/plain">
-        <label for="naam">Je Naam:</label>
-        <input type="text" id="naam" name="naam" required>
+    <!-- Contact formulier -->
+    <section class="contact">
+        <h2>Neem Contact Met Ons Op</h2>
+        <form action="#">
+            <label for="name">Naam</label>
+            <input type="text" id="name" name="name" placeholder="Uw naam" required>
 
-        <label for="telefoon">Telefoonnummer:</label>
-        <input type="tel" id="telefoon" name="telefoon" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
 
-        <label for="datum">Datum van Rit:</label>
-        <input type="date" id="datum" name="datum" required>
+            <label for="message">Bericht</label>
+            <textarea id="message" name="message" placeholder="Hoe kunnen wij u helpen?" required></textarea>
 
-        <label for="tijd">Tijd van Rit:</label>
-        <input type="time" id="tijd" name="tijd" required>
+            <button type="submit">Verstuur</button>
+        </form>
+    </section>
 
-        <label for="bestemming">Bestemming:</label>
-        <input type="text" id="bestemming" name="bestemming" required>
-
-        <label for="aantal-personen">Aantal Personen:</label>
-        <select id="aantal-personen" name="aantal-personen">
-            <option value="1">1 persoon</option>
-            <option value="2">2 personen</option>
-            <option value="3">3 personen</option>
-            <option value="4">4 personen</option>
-            <option value="meer">Meer dan 4</option>
-        </select>
-
-        <input type="submit" value="Reserveren">
-    </form>
-</section>
-
-<section id="contact">
-    <h2>Contacteer Ons</h2>
-    <p>Heb je vragen? Neem contact met ons op:</p>
-    <ul>
-        <li>Email: info@taxibedrijf.nl</li>
-        <li>Telefoon: 010-1234567</li>
-        <li>Adres: Taxi Bedrijfstraat 1, 1234 AB Rotterdam</li>
-    </ul>
-</section>
-
-<footer>
-    <p>&copy; 2025 Taxi Bedrijf. Alle rechten voorbehouden.</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Taxi Bedrijf. Alle rechten voorbehouden. <a href="#">Privacybeleid</a></p>
+    </footer>
 
 </body>
 </html>
+
