@@ -1,180 +1,141 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl-NL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTS N.V. | Luxe Taxi Services</title>
+    <title>Premium Taxi</title>
     <style>
+        /* Algemene stijlen */
         body {
+            font-family: 'Lato', sans-serif;
             margin: 0;
-            font-family: 'Open Sans', Arial, sans-serif;
-            background-color: #f5f5f5;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
-            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(90deg, #004aad, #022d5c);
-            color: white;
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            padding: 30px 0;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        header img {
-            max-width: 200px;
-            margin-bottom: 15px;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #022d5c;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #f5b50b;
+            font-size: 1.5em;
         }
 
         .hero {
-            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
-            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('luxury-car.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 80px 20px;
         }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.2em;
+            margin: 20px 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        .hero a {
+            background-color: #d4af37;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        .usp {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .hero a:hover {
+            background-color: #b38a2e;
         }
 
-        .usp-item {
-            flex: 1 1 calc(33% - 20px);
-            background: #f9f9f9;
-            margin: 10px;
-            padding: 20px;
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .service {
+            background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
-            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .usp-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .usp-item h3 {
+        .service h3 {
             margin-bottom: 15px;
-            font-family: 'Roboto Slab', serif;
+            font-size: 1.5em;
         }
 
-        .usp-item p {
-            font-size: 1rem;
+        .service p {
+            margin-bottom: 15px;
+            font-size: 1em;
+            color: #555;
         }
 
-        footer {
-            background: #022d5c;
-            color: white;
+        .footer {
+            background-color: #000;
+            color: #fff;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px 0;
             margin-top: 20px;
         }
 
-        footer a {
-            color: #f5b50b;
+        .footer a {
+            color: #d4af37;
             text-decoration: none;
             font-weight: bold;
         }
 
-        footer a:hover {
+        .footer a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <img src="RTS NV LOGO.png" alt="RTS NV Logo">
-    <h1>RTS N.V. | Luxe Taxi Services</h1>
-    <p>Betrouwbaar, Professioneel en Op Tijd.</p>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#diensten">Taxi Diensten</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero" id="home">
-    <h2>Welkom bij RTS N.V.</h2>
-    <p>Uw partner in luxe en professioneel vervoer.</p>
-</section>
-
-<section class="container">
-    <h2>Waarom kiezen voor RTS N.V.?</h2>
-    <div class="usp">
-        <div class="usp-item">
-            <h3>Vakbekwaam</h3>
-            <p>Servicegericht professioneel bedrijf met veiligheid en vakbekwaam personeel als prioriteit.</p>
+    <header>
+        Premium Taxi Services
+    </header>
+    <section class="hero">
+        <div>
+            <h1>Rijden in Luxe</h1>
+            <p>Ervaar eersteklas service en comfort met onze premium taxi's.</p>
+            <a href="#services">Ontdek Meer</a>
         </div>
-        <div class="usp-item">
-            <h3>Centraal</h3>
-            <p>Sinds 2005 gegroeid tot de vervoerscentrale voor al uw scheepvaart en zakelijk vervoer.</p>
+    </section>
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Zakelijk Vervoer</h3>
+            <p>Stijlvol en betrouwbaar transport voor uw zakelijke afspraken.</p>
         </div>
-        <div class="usp-item">
-            <h3>Voordelig</h3>
-            <p>Beste service en kwaliteit die op tijd geleverd wordt, tegen zeer lage tarieven.</p>
+        <div class="service">
+            <h3>Luchthavenservice</h3>
+            <p>Ontspannen reizen naar en van de luchthaven met onze luxe voertuigen.</p>
         </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 RTS N.V. Alle rechten voorbehouden. <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a></p>
-</footer>
-
+        <div class="service">
+            <h3>Evenementenvervoer</h3>
+            <p>Aankomen in stijl bij speciale gelegenheden en evenementen.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 Premium Taxi Services. Alle rechten voorbehouden. <a href="#">Contacteer Ons</a></p>
+    </footer>
 </body>
 </html>
