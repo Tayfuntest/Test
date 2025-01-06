@@ -1,279 +1,167 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Taxi Bedrijf</title>
-
+    <title>RTS NV - Professional Solutions</title>
     <style>
-        /* Algemene body styling */
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             color: #333;
-            background-color: #ecf0f1;
+            line-height: 1.6;
         }
 
-        /* Algemene styling voor de container */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header styling */
         header {
-            background-color: #f39c12;
+            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
-            padding: 40px 0;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            max-width: 200px;
+            margin-bottom: 20px;
         }
 
         header h1 {
-            font-size: 50px;
+            font-size: 3rem;
             margin: 0;
-            font-weight: bold;
         }
 
         header p {
-            font-size: 20px;
+            font-size: 1.5rem;
             margin-top: 10px;
         }
 
-        /* Navigatie styling */
         nav {
-            background-color: #34495e;
-            text-align: center;
-            padding: 10px 0;
+            background: #004aad;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         nav a {
-            color: #ecf0f1;
+            color: white;
             text-decoration: none;
-            padding: 14px 25px;
-            font-size: 18px;
             margin: 0 15px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #f39c12;
-            color: #fff;
+            text-decoration: underline;
         }
 
-        /* Hero sectie */
-        .hero {
-            background: url('taxi-hero-image.jpg') no-repeat center center;
-            background-size: cover;
-            height: 450px;
-            color: white;
-            text-align: center;
-            padding-top: 100px;
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
         }
 
-        .hero h2 {
-            font-size: 50px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-top: 15px;
-        }
-
-        /* Sectie voor diensten */
-        .diensten {
+        .services {
             display: flex;
             justify-content: space-between;
-            padding: 60px 0;
-            background-color: #ffffff;
+            flex-wrap: wrap;
         }
 
-        .dienst-item {
-            background-color: #f1c40f;
-            color: white;
-            padding: 40px;
-            width: 30%;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .dienst-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .dienst-item h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .dienst-item p {
-            font-size: 18px;
-        }
-
-        /* Contact formulier styling */
-        .contact {
-            background-color: #34495e;
-            color: white;
-            padding: 40px 0;
-        }
-
-        .contact h2 {
-            text-align: center;
-            font-size: 36px;
-        }
-
-        .contact form {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact label {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .contact input, .contact textarea {
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .contact button {
-            background-color: #f39c12;
-            color: white;
-            padding: 12px;
-            font-size: 18px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact button:hover {
-            background-color: #e67e22;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: white;
+        .service {
+            flex: 1 1 calc(33% - 20px);
+            margin: 10px;
             padding: 20px;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             text-align: center;
         }
 
-        footer p {
-            font-size: 14px;
+        .service img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .service h3 {
+            margin-top: 15px;
+            font-size: 1.25rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
 
         footer a {
-            color: #f39c12;
+            color: #00aaff;
             text-decoration: none;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Responsiviteit voor mobiele apparaten */
-        @media (max-width: 768px) {
-            .diensten {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .dienst-item {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-
-            .hero h2 {
-                font-size: 36px;
-            }
-
-            nav a {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Taxi Service</h1>
-        <p>Snelle, betrouwbare en comfortabele ritten voor elke gelegenheid!</p>
-    </header>
+<header>
+    <img src="RTS NV LOGO.png" alt="RTS NV Logo">
+    <div>
+        <h1>Welcome to RTS NV</h1>
+        <p>Your Partner in Professional Solutions</p>
+    </div>
+</header>
 
-    <!-- Navigatiebalk -->
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Diensten</a>
-        <a href="#">Over ons</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav>
+    <div class="container">
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <!-- Hero sectie -->
-    <section class="hero">
-        <h2>Jouw taxi, altijd dichtbij!</h2>
-        <p>Maak een rit met ons, snel, veilig en comfortabel.</p>
-    </section>
+<section class="container" id="about">
+    <h2>About RTS NV</h2>
+    <p>RTS NV is a leading company specializing in innovative and professional solutions tailored to meet the diverse needs of our clients. With years of experience, we pride ourselves on delivering excellence, efficiency, and expertise.</p>
+</section>
 
-    <!-- Diensten sectie -->
-    <section class="diensten">
-        <div class="dienst-item">
-            <h3>Standaard Taxi</h3>
-            <p>Voor dagelijkse ritten, snel en betrouwbaar.</p>
+<section class="container" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <img src="https://via.placeholder.com/300x200" alt="Service 1">
+            <h3>Consulting</h3>
+            <p>Expert advice and guidance for your business challenges.</p>
         </div>
-        <div class="dienst-item">
-            <h3>Luxe Taxi</h3>
-            <p>Reis in stijl met onze luxe voertuigen.</p>
+        <div class="service">
+            <img src="https://via.placeholder.com/300x200" alt="Service 2">
+            <h3>Project Management</h3>
+            <p>Efficiently managing projects to ensure success.</p>
         </div>
-        <div class="dienst-item">
-            <h3>Vervoer voor Groepen</h3>
-            <p>Ideaal voor evenementen of groepsvervoer.</p>
+        <div class="service">
+            <img src="https://via.placeholder.com/300x200" alt="Service 3">
+            <h3>Technology Solutions</h3>
+            <p>Innovative technology to drive your business forward.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact sectie -->
-    <section class="contact">
-        <h2>Neem contact met ons op</h2>
-        <form action="#">
-            <label for="name">Naam</label>
-            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+<section class="container" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to learn more about our services, feel free to get in touch with us.</p>
+    <p>Email: <a href="mailto:info@rtsnv.com">info@rtsnv.com</a></p>
+    <p>Phone: +32 123 456 789</p>
+</section>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
-
-            <label for="message">Bericht</label>
-            <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
-
-            <button type="submit">Verstuur</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Taxi Bedrijf. Alle rechten voorbehouden. <a href="#">Privacybeleid</a></p>
-    </footer>
+<footer>
+    <p>&copy; 2025 RTS NV. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
 
 </body>
 </html>
 
-
-</body>
-</html>
 
