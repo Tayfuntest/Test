@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taxi Bedrijf - Snel en veilig van A naar B.">
+    <title>Taxi Bedrijf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 2em;
+            margin: 2em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        form {
+            margin-top: 1em;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Taxi Bedrijf</h1>
+    <p>Snel, veilig en betrouwbaar vervoer voor elke gelegenheid</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#diensten">Diensten</a>
+    <a href="#reserveren">Reserveren</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welkom bij Taxi Bedrijf</h2>
+    <p>Bij Taxi Bedrijf zorgen wij ervoor dat je altijd op tijd op je bestemming aankomt. Of je nu naar het vliegveld moet, een zakelijke afspraak hebt, of gewoon een rit door de stad wilt maken – wij staan voor je klaar. Onze chauffeurs zijn ervaren, vriendelijk en professioneel.</p>
+</section>
+
+<section id="diensten">
+    <h2>Onze Diensten</h2>
+    <ul>
+        <li>Vervoer naar het vliegveld</li>
+        <li>Zakelijke ritten</li>
+        <li>Stadsvervoer</li>
+        <li>Groepsvervoer</li>
+        <li>24/7 Beschikbaarheid</li>
+    </ul>
+</section>
+
+<section id="reserveren">
+    <h2>Reserveer je Taxi</h2>
+    <p>Vul het formulier hieronder in om een taxi te reserveren.</p>
+    <form action="mailto:info@taxibedrijf.nl" method="post" enctype="text/plain">
+        <label for="naam">Je Naam:</label>
+        <input type="text" id="naam" name="naam" required>
+
+        <label for="telefoon">Telefoonnummer:</label>
+        <input type="tel" id="telefoon" name="telefoon" required>
+
+        <label for="datum">Datum van Rit:</label>
+        <input type="date" id="datum" name="datum" required>
+
+        <label for="tijd">Tijd van Rit:</label>
+        <input type="time" id="tijd" name="tijd" required>
+
+        <label for="bestemming">Bestemming:</label>
+        <input type="text" id="bestemming" name="bestemming" required>
+
+        <label for="aantal-personen">Aantal Personen:</label>
+        <select id="aantal-personen" name="aantal-personen">
+            <option value="1">1 persoon</option>
+            <option value="2">2 personen</option>
+            <option value="3">3 personen</option>
+            <option value="4">4 personen</option>
+            <option value="meer">Meer dan 4</option>
+        </select>
+
+        <input type="submit" value="Reserveren">
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contacteer Ons</h2>
+    <p>Heb je vragen? Neem contact met ons op:</p>
+    <ul>
+        <li>Email: info@taxibedrijf.nl</li>
+        <li>Telefoon: 010-1234567</li>
+        <li>Adres: Taxi Bedrijfstraat 1, 1234 AB Rotterdam</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 Taxi Bedrijf. Alle rechten voorbehouden.</p>
+</footer>
+
+</body>
+</html>
