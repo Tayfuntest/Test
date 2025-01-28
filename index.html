@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTS N.V. - Professioneel Taxi- en Vervoersbedrijf</title>
+    <style>
+        /* Algemene stijlen */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: #003366;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header .logo {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: #003366;
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Hero Sectie */
+        .hero {
+            background: url('taxi-hero.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* USP Sectie */
+        .usps {
+            padding: 60px 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .usps .usp {
+            display: inline-block;
+            width: 30%;
+            margin: 0 1.5%;
+        }
+
+        /* Statistieken Sectie */
+        .stats-section {
+            padding: 80px 0;
+            background: #003366;
+            color: #fff;
+            text-align: center;
+        }
+
+        .stats-section .stat {
+            display: inline-block;
+            margin: 0 30px;
+        }
+
+        .stats-section h3 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .stats-section p {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #002244;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo1a2.png" alt="RTS N.V. Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#taxi-diensten">Taxi Diensten</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="scheepvaart.html">Scheepvaartvervoer</a></li>
+                            <li><a href="luchthaven.html">Luchthavenvervoer</a></li>
+                            <li><a href="zakelijk.html">Zakelijk Vervoer</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="koeriers.html">Koeriersdiensten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welkom bij RTS N.V.</h1>
+            <p>Professioneel, betrouwbaar en servicegericht vervoer sinds 2005.</p>
+        </div>
+    </section>
+
+    <section id="usps" class="usps">
+        <div class="container">
+            <div class="usp">
+                <h3>Klantvriendelijke Chauffeurs</h3>
+                <p>Onze chauffeurs staan voor u klaar om uw rit zo aangenaam mogelijk te laten verlopen.</p>
+            </div>
+            <div class="usp">
+                <h3>Beste Service en Kwaliteit</h3>
+                <p>Op tijd geleverd, tegen zeer lage tarieven.</p>
+            </div>
+            <div class="usp">
+                <h3>Uitgebreid Dienstenpakket</h3>
+                <p>Scheepvaart, luchthavenservice, zakelijk en VIP-vervoer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="statistieken" class="stats-section">
+        <div class="container">
+            <div class="stat">
+                <h3 data-target="23000">0</h3>
+                <p>Ritten per jaar</p>
+            </div>
+            <div class="stat">
+                <h3 data-target="6000000">0</h3>
+                <p>Verzekerd tot €6.000.000</p>
+            </div>
+            <div class="stat">
+                <h3 data-target="100">0</h3>
+                <p>100% Tevredenheidsgarantie</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 RTS N.V. | Alle rechten voorbehouden</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll-animatie voor statistieken
+        const stats = document.querySelectorAll('.stat h3');
+
+        const animateStats = () => {
+            stats.forEach(stat => {
+                const target = +stat.getAttribute('data-target');
+                const increment = target / 100;
+                let count = 0;
+
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        stat.textContent = Math.ceil(count);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+
+                updateCount();
+            });
+        };
+
+        // Voer animatie uit wanneer de sectie in beeld komt
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector('.stats-section'));
+    </script>
+</body>
+</html>
